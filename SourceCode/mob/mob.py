@@ -1,6 +1,7 @@
 import sys
 sys.path.append('../')
 import map_object
+import mob_dwarf
 
 class Mob(map_object.Map_Object):
   def __init__(self):
@@ -9,7 +10,7 @@ class Mob(map_object.Map_Object):
     self.damageToBase = 0
   
   
-  #GET AND SET METHORDS
+  #GET AND SET METHODS
   def setSpeed(self, newSpeed):
     self.speed= newSpeed
   def getSpeed(self):
@@ -25,3 +26,6 @@ class Mob(map_object.Map_Object):
   def getDamageToBase(self):
     return self.DamageToBase
 
+  def pathing(self):
+    
+      
