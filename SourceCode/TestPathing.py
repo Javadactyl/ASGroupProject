@@ -13,18 +13,15 @@ class Map () :
             for n in range(0,5):
                 c.append(0)
 
-        Starter=newMap[0]
-        Ender=newMap[9]
+        newMap[0][2]=2
+        newMap[9][2]=3
         #THIS SLOT SHOULD NOT BE CHANGED
-        Starter[2]=2
-        Ender[2]=3
         self.currentMap=newMap
         
     def getMap (self):
         return self.currentMap
         
     def updateMap (self,coordinates,changeValue):
-        
         #cordinates get changed to location in array
         
         split=list(str(coordinates))
@@ -33,9 +30,7 @@ class Map () :
         
         #Updating the map instance to the new value
         
-        mapUpdateP1=self.currentMap
-        mapUpdateP2=mapUpdateP1[verticalCordinate]
-        mapUpdateP2[horizontalCoridinate]=ChangeValue
+        self.currentMap[verticalCordinate][horizontalCoridinate]=ChangeValue
 
     def ReturnMap (self, coorinates):
         
@@ -116,5 +111,3 @@ TestMap.newMap()
 TestMap.printMap()
 
 print(TestMap.returnPath())
-
-
